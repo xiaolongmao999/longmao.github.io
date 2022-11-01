@@ -561,7 +561,7 @@ footer a:hover {
 	}
 }
 /*深色模式*/
-body.dark{
+/* body.dark{
 	background-color: #1e1e1e;
 }
 body.dark header{
@@ -608,4 +608,4 @@ body.dark .header{
 body.dark .header .logo a,
 body.dark .header .nav-bar i{
 	color: #f3f3f3;
-}
+} */
