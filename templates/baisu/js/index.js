@@ -137,17 +137,17 @@ if (theme == 'dark') {
 }
 $('.theme').click(function () {
 	if ($.cookie('theme') == "" || $.cookie('theme') == null) {
-		$('body').addClass('dark')
+		$('body').removeClass('dark')
 		$.cookie('theme', 'dark', {
+			path: '/'
+		});
+		console.log('切换至浅色模式')
+	} else {
+		$('body').addClass('dark')
+		$.removeCookie('theme', 'dark', {
 			expires: 365,
 			path: '/'
 		});
 		console.log('切换至深色模式')
-	} else {
-		$('body').removeClass('dark')
-		$.removeCookie('theme', 'dark', {
-			path: '/'
-		});
-		console.log('切换至浅色模式')
 	}
 })
