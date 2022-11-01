@@ -129,25 +129,25 @@ $('.nav-bar').click(function () {
 //		path: '/'
 //	});
 //})
-var theme = $.cookie('theme');
-if (theme == 'dark') {
-	$('body').addClass('dark')
-} else {
-	$('body').removeClass('dark');
-}
-$('.theme').click(function () {
-	if ($.cookie('theme') == "" || $.cookie('theme') == null) {
-		$('body').addClass('dark')
-		$.cookie('theme', 'dark', {
-			expires: 365,
-			path: '/'
-		});
-		console.log('切换至深色模式')
-	} else {
-		$('body').removeClass('dark')
-		$.removeCookie('theme', 'dark', {
-			path: '/'
-		});
-		console.log('切换至浅色模式')
-	}
-})
+// var theme = $.cookie('theme');
+// if (theme == 'dark') {
+// 	$('body').addClass('dark')
+// } else {
+// 	$('body').removeClass('dark');
+// }
+// $('.theme').click(function () {
+// 	if ($.cookie('theme') == "" || $.cookie('theme') == null) {
+// 		$('body').addClass('dark')
+// 		$.cookie('theme', 'dark', {
+// 			expires: 365,
+// 			path: '/'
+// 		});
+// 		console.log('切换至深色模式')
+// 	} else {
+// 		$('body').removeClass('dark')
+// 		$.removeCookie('theme', 'dark', {
+// 			path: '/'
+// 		});
+// 		console.log('切换至浅色模式')
+// 	}
+// })
