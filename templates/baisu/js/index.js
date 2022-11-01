@@ -139,13 +139,13 @@ $('.theme').click(function () {
 	if ($.cookie('theme') == "" || $.cookie('theme') == null) {
 		$('body').removeClass('dark')
 		$.cookie('theme', 'dark', {
+			expires: 365,
 			path: '/'
 		});
 		console.log('切换至浅色模式')
 	} else {
 		$('body').addClass('dark')
-		$.removeCookie('theme', 'dark', {
-			expires: 365,
+		$.addCookie('theme', 'dark', {
 			path: '/'
 		});
 		console.log('切换至深色模式')
