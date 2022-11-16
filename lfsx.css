@@ -606,7 +606,7 @@ a.back_to_top:hover span {
     text-align: center;
   }
   .nav_container .site_nav li {
-    float: none;
+    float: left;
   }
   .nav_container .menu_icon {
     position: fixed;
