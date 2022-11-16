@@ -594,7 +594,7 @@ a.back_to_top:hover span {
     display: block;
     position: fixed;
     right: 0;
-    top: 60px;
+    top: 0;
     padding: 10px 0;
     width: 100%;
     background-color: #ffffff;
