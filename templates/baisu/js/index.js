@@ -34,7 +34,7 @@ $('#baidu').click(function () {
 
 	if (keywords == '') {
 
-		window.open('https://cn.bing.com/?mkt=zh-cn');
+		window.open('https://limestart.cn/');
 
 	} else {
 
