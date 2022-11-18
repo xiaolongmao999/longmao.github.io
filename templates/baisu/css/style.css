@@ -567,9 +567,31 @@ footer a:hover {
 		display: none;
 	}
 
-	nav .main-top .search-main {
+		.search-main {
 		width: 70%;
 	}
+
+	.search-input input {
+		background-color: #fff;
+		width: 70%;
+	}
+
+	.search-btnlist {
+		width: 70%;
+	}
+
+	.search-main button.search-btn {
+		width: 70%;
+	}
+
+	.search-main button.search-btn img {
+		width: 70%;
+	}
+
+	.search-main .search-btnlist .search-lists .list img {
+		width: 70%;
+	}
+
 
 
 	.main {
