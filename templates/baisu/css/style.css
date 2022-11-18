@@ -573,13 +573,21 @@ footer a:hover {
 
 	.search-main .search-input input.kw {
 		background-color: #fff;
-		width: 70%;
+		width: 60%;
 	}
 
 	.search-main .search-btnlist {
 		position: absolute;
 		top: 0;
-		left: 93%;
+		left: 90%;
+	}
+
+	.search-main .search-btnlist .search-lists {
+		width: 362px;
+	}
+
+	.search-main .search-btnlist .search-lists .list {
+		font-size: 13px;
 	}
 
 	.search-main .search-btnlist .search-btn {
@@ -589,14 +597,14 @@ footer a:hover {
 	.search-main .search-input img {
 		position: absolute;
 		top: 12px;
-		right: 35%;
+		right: 46%;
 		width: 15px;
 		height: 15px;
 	}
 
 	.main {
 		padding-left: 0;
-		padding-top: 0px;
+		padding-top: 35px;
 	}
 
 	.site-main {
