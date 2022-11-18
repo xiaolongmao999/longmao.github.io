@@ -1,153 +1,58 @@
-$(".bs-addUrl").click(function () {
-	layer.open({
-		type: 2,
-		title: '添加链接',
-		maxmin: true,
-
-		shadeClose: true, //点击遮罩关闭层
-
-		area: ['800px', '520px'],
-
-		content: '/index.php?c=admin&page=add_link_tpl'
+//清空输入框
+$("#clear").click(function () {
+	$("#search").val("");
+});
+//搜索引擎切换
+function searchChange() {
+	$(".search-change").click(function () {
+		$('.search-lists').toggleClass('hide');
+		console.log('1')
+	});
+	$(".search-lists .list").click(function () {
+		var souurl = $(this).data('url');
+		var text = $(this).html();
+		$('.search-btn').html(text);
+		$('.search-btn').attr('data-url', souurl);
+		$('.search-lists').addClass('hide');
+		console.log(souurl);
 
 	});
+	$(".search-btn").click(function () {
+		var url = $(this).attr('data-url');
+		var kw = $('#search').val();
+		if (kw !== "") {
+			window.open(url + kw);
+		}
+	});
+}
+searchChange();
+//回车键、本地搜索
+function keyClick() {
+	$('body').keyup(function (e) {
+		if (e.keyCode === 13) {
+			var isFocus = $("#search").is(":focus");
+			if (true == isFocus) {
+				console.log(isFocus);
+				var url = $('.search-btn').attr('data-url');
+				var kw = $('#search').val();
+				if (kw !== "") {
+					window.open(url + kw);
+				} else {
+					layer.msg('', {
+						time: 1000,
+					});
+				}
+			}
+		}
+	});
+	$("#search").focus(function (data, status) {
+		$('.search-lists').addClass('hide');
+	});
+	$("#search").blur(function (data, status) {
+		if ($("#search").val() == '') {
+			$(".site-name").removeClass("hidden");
+		};
+	});
+}
+keyClick();
 
-});
-
-$(".search-input").blur(function (data, status) {
-
-	var keywords = $(".search-input").val();
-
-	if (keywords == '') {
-
-		$(".site-type").removeClass("hidden");
-
-	}
-
-});
-
-$('#baidu').click(function () {
-
-	var keywords = $(".search-input").val();
-
-	var biyingUrl = 'https://www.bing.com/search?q=' + keywords;
-
-	if (keywords == '') {
-
-		window.open('https://limestart.cn/');
-
-	} else {
-
-		window.open(biyingUrl);
-
-	}
-
-})
-
-holmes({
-
-	input: '.search-input',
-
-	find: '.url-list',
-
-	placeholder: '<div class="empty">未搜索到匹配结果！</div>',
-
-	mark: false,
-
-	hiddenAttr: true,
-
-	class: {
-
-		visible: 'visible',
-
-		hidden: 'hidden'
-
-	},
-
-	instant: true,
-
-	onHidden(el) { },
-
-	onFound(el) {
-
-		$(".site-type").addClass("hidden");
-
-	},
-
-	onInput(el) {
-
-		$(".site-type").addClass("hidden");
-
-	},
-
-	onVisible(el) {
-
-		$(".site-type").removeClass("hidden");
-
-	},
-
-	onEmpty(el) {
-
-		$(".site-type").removeClass("hidden");
-
-	}
-
-});
-
-$('a').click(function () {
-
-	var target = $(this).attr('href');
-	console.log(target);
-
-	$('html, body').animate({
-
-		scrollTop: $(target).offset().top - 90 //65位设置的偏移值
-
-	}, 300);
-
-	return false;
-
-});
-$('.scroll_top').click(function () { $('html,body').animate({ scrollTop: '0px' }, 500); });
-$(window).scroll(function () {
-	if ($(window).scrollTop() >= 200) {
-		$(".scroll_top").fadeIn(1000);
-	} else {
-		$(".scroll_top").stop(true, true).fadeOut(1000);
-	}
-});
-$('.nav-bar').click(function () {
-	$(this).find('i').toggleClass('fa-close');
-	$(this).find('i').toggleClass('fa-bars');
-	$('header').toggleClass('show');
-});
-
-//$('.theme').click(function() {
-//	$('body').addClass('dark')
-//	$.cookie('theme', 'dark', {
-//		expires: 7,
-//		path: '/'
-//	});
-//})
-// var theme = $.cookie('theme');
-// if (theme == 'dark') {
-// 	$('body').addClass('dark')
-// } else {
-// 	$('body').removeClass('dark');
-// }
-// $('.theme').click(function () {
-// 	if ($.cookie('theme') == "" || $.cookie('theme') == null) {
-// 		$('body').addClass('dark')
-// 		$.cookie('theme', 'dark', {
-// 			expires: 365,
-// 			path: '/'
-// 		});
-// 		console.log('切换至深色模式')
-// 	} else {
-// 		$('body').removeClass('dark')
-// 		$.removeCookie('theme', 'dark', {
-// 			path: '/'
-// 		});
-// 		console.log('切换至浅色模式')
-// 	}
-// })
