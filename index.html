@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta name="renderer" content="webkit|ie-comp|ie-stand">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
     <meta http-equiv="Cache-Control" content="no-transform">
     <meta name="applicable-device" content="pc,mobile">
     <meta name="MobileOptimized" content="width">
     <meta name="HandheldFriendly" content="true">
     <meta name="author" content="longmao" />
     <title>小龙猫导航</title>
-    <meta name="keywords" content="小龙猫导航|资源网站|好用实用软件推荐|网盘搜索网站"/>
+    <meta name="keywords" content="小龙猫导航|资源网站|好用实用软件推荐|网盘搜索网站" />
     <meta name="description" content="小龙猫导航收集精品网络免费资源、包括网盘搜索、软件、网站和各类资源，欢迎前来探索。" />
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="stylesheet" type="text/css" href="templates/baisu/css/style.css" />
     <link rel="stylesheet" type="text/css" href="templates/baisu/css/font-awesome.min.css" />
 </head>
+
 <body>
     <header>
         <div class="logo">
@@ -67,12 +70,46 @@
         </div>
     </header>
     <nav class="main-top">
-        <div class="search">
-            <input type="text" class="search-input" placeholder="输入关键词搜索" />
-            <button id="baidu">必应搜索</button>
+        <div class="search-main">
+            <div class="search-input">
+                <input type="text" class="kw" name="search" id="search" value="" placeholder="回车键必应搜索"
+                    autocomplete="off" />
+                <a href="javascript:" id="clear"><img src="templates\baisu\images/icon/clear.png"></a>
+            </div>
+            <div class="search-btnlist">
+                <button class="search-btn search-change" data-url="https://cn.bing.com/search?q=">
+                    <img src="templates\baisu\images/icon/bing.svg" />
+                    必应搜索</button>
+                <div class="search-lists hide">
+                    <div class="list" data-url="https://cn.bing.com/search?q=">
+                        <img src="templates\baisu\images\icon\bing.svg" />必应搜索
+                    </div>
+                    <div class="list" data-url="https://www.google.com/search?q=">
+                        <img src="templates\baisu\images/icon/google.svg" />谷歌搜索
+                    </div>
+                    <div class="list" data-url="https://www.baidu.com/s?ie=UTF-8&wd=">
+                        <img src="templates\baisu\images/icon/baidu.svg" />百度搜索
+                    </div>
+                    <div class="list" data-url="https://www.zhihu.com/search?type=content&q=">
+                        <img src="templates\baisu\images/icon/zhihu.png" />知乎搜索
+                    </div>
+                    <div class="list" data-url="https://search.bilibili.com/all?keyword=">
+                        <img src="templates\baisu\images/icon/bilibili.svg" />Bilibili搜索
+                    </div>
+                    <div class="list" data-url="https://s.weibo.com/weibo?q=">
+                        <img src="templates\baisu\images/icon/weibo.svg" />微博搜索
+                    </div>
+                    <!--此处添加搜索引擎 S-->
+                    <!--<div class="list" data-url="搜索链接">
+								<img src="搜索引擎图标路径" />搜索引擎名称
+							</div>-->
+                    <!--此处添加搜索引擎 E-->
+
+                    <div class="list kongs"></div>
+                </div>
+            </div>
         </div>
         <div class="main-top-r">
-       <!-- <span class="theme"><i class="fa fa-magic"></i></span> -->
             <a href="login.html" title="登录" target="_blank"><i class="fa fa-user-circle-o"></i></a>
         </div>
     </nav>
@@ -90,7 +127,7 @@
                         </p>
                     </a>
                 </div>
-	  	<div class="list url-list">
+                <div class="list url-list">
                     <a href="https://www.wxzw.cc/book/4878/1" target="_blank">
                         <p class="name">
                             <img src="https://www.wxzw.cc/static/biquge/favicon.ico">
@@ -106,7 +143,7 @@
                         </p>
                     </a>
                 </div>
-		<div class="list url-list">
+                <div class="list url-list">
                     <a href="https://www.runningcheese.com/" target="_blank">
                         <p class="name">
                             <img src="https://www.runningcheese.com/favicon.ico">
@@ -130,14 +167,14 @@
                         </p>
                     </a>
                 </div>
-		<div class="list url-list">
+                <div class="list url-list">
                     <a href="https://www.crxsoso.com/" target="_blank">
                         <p class="name">
                             <img src="https://www.crxsoso.com/favicon.ico">
                             Crx搜搜
                         </p>
                     </a>
-                </div>              
+                </div>
                 <div class="list url-list">
                     <a href="https://greasyfork.org/zh-CN/scripts" target="_blank" title="针对您所访问的网站添加功能或解决问题的用户脚本。">
                         <p class="name">
@@ -170,7 +207,7 @@
                         </p>
                     </a>
                 </div>
-		 <div class="list url-list">
+                <div class="list url-list">
                     <a href="https://gitee.com/" target="_blank">
                         <p class="name">
                             <img src="https://gitee.com/assets/favicon.ico">
@@ -186,7 +223,7 @@
                         </p>
                     </a>
                 </div>
-		<div class="list url-list">
+                <div class="list url-list">
                     <a href="https://www.youtube.com/" target="_blank">
                         <p class="name">
                             <img src="https://favicon.rss.ink/v1/aHR0cHM6Ly93d3cueW91dHViZS5jb20=">
@@ -194,7 +231,7 @@
                         </p>
                     </a>
                 </div>
-		<div class="list kongs"></div>
+                <div class="list kongs"></div>
                 <div class="list kongs"></div>
                 <div class="list kongs"></div>
                 <div class="list kongs"></div>
@@ -202,7 +239,7 @@
             <div class="site-type" id="category-21">
                 <i class="fa fa-search"></i>资源搜索
             </div>
-	    <div class="site-list">
+            <div class="site-list">
                 <div class="list url-list">
                     <a href="https://lzpan.com/" target="_blank">
                         <p class="name">
@@ -274,7 +311,7 @@
                             <img src="https://favicon.rss.ink/v1/aHR0cDovL3d3dy5kYXlhbnphaS5tZQ==">
                             大眼仔旭
                         </p>
- 		    </a>
+                    </a>
 
                 </div>
                 <div class="list url-list">
@@ -367,7 +404,7 @@
                         </p>
                     </a>
                 </div>
-		<div class="list url-list">
+                <div class="list url-list">
                     <a href="http://www.kuwo.cn/" target="_blank">
                         <p class="name">
                             <img src="https://favicon.rss.ink/v1/aHR0cDovL3d3dy5rdXdvLmNu">
@@ -408,7 +445,7 @@
                         </p>
                     </a>
                 </div>
-               <div class="list url-list">
+                <div class="list url-list">
                     <a href="https://jingzhunyun.com/" target="_blank">
                         <p class="name">
                             <img src="https://favicon.rss.ink/v1/aHR0cHM6Ly9qaW5nemh1bnl1bi5jb20=">
@@ -523,7 +560,7 @@
                         </p>
                     </a>
                 </div>
-                <div class="list url-list" >
+                <div class="list url-list">
                     <a href="https://www.hjenglish.com/" target="_blank">
                         <p class="name">
                             <img src="https://favicon.rss.ink/v1/aHR0cHM6Ly93d3cuaGplbmdsaXNoLmNvbQ==">
@@ -531,7 +568,7 @@
                         </p>
                     </a>
                 </div>
-               <div class="list url-list">
+                <div class="list url-list">
                     <a href="https://www.xmind.cn/" target="_blank">
                         <p class="name">
                             <img src="https://favicon.rss.ink/v1/aHR0cHM6Ly93d3cueG1pbmQuY24=">
@@ -554,7 +591,7 @@
                             <img src="https://favicon.rss.ink/v1/aHR0cHM6Ly93d3cueXBwcHQuY29t">
                             优品PPT
                         </p>
-	            </a>
+                    </a>
                 </div>
                 <div class="list url-list">
                     <a href="https://www.officeplus.cn/" target="_blank">
@@ -596,7 +633,7 @@
                         </p>
                     </a>
                 </div>
-                <div class="list url-list" >
+                <div class="list url-list">
                     <a href="http://www.51pptmoban.com/" target="_blank">
                         <p class="name">
                             <img src="https://favicon.rss.ink/v1/aHR0cDovL3d3dy41MXBwdG1vYmFuLmNvbQ==">
@@ -628,7 +665,7 @@
                         </p>
                     </a>
                 </div>
-		<div class="list kongs"></div>
+                <div class="list kongs"></div>
                 <div class="list kongs"></div>
                 <div class="list kongs"></div>
                 <div class="list kongs"></div>
@@ -659,4 +696,5 @@
         }
     </script>
 </body>
+
 </html>
