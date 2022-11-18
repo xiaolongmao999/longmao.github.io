@@ -571,15 +571,19 @@ footer a:hover {
 		width: 70%;
 	}
 
-	.search-input input {
+	.search-main .search-input input.kw {
 		background-color: #fff;
-		width: 30%;
+		width: 70%;
 	}
 
 	.search-main .search-btnlist {
 		position: absolute;
 		top: 0;
 		left: 93%;
+	}
+
+	.search-main .search-btnlist .search-btn {
+		background-color: #fff;
 	}
 
 	.search-main .search-input img {
