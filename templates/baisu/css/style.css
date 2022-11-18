@@ -1,6 +1,5 @@
-
-
 @charset "utf-8";
+
 * {
 	padding: 0;
 	margin: 0;
@@ -21,7 +20,10 @@ i.fa {
 	src: url('../fonts/youshe.ttf');
 }
 
-input:focus,
+input:focus {
+	outline: 1px solid #C0D3FE;
+}
+
 button:focus {
 	outline: none;
 }
@@ -29,8 +31,6 @@ button:focus {
 textarea:focus {
 	outline: none;
 }
-
-input {}
 
 body {
 	background-color: #f2f3fa;
@@ -95,12 +95,14 @@ header .logo a {
 	font-family: youshe;
 	font-size: 42px;
 }
-header .logo a .logoimg{
+
+header .logo a .logoimg {
 	position: relative;
 	top: 10px;
 	width: 50px;
 	height: 50px;
 }
+
 header .typelist {
 	width: 100%;
 }
@@ -156,51 +158,112 @@ nav.main-top {
 	box-shadow: 0px 2px 4px #ccc;
 }
 
-nav.main-top .search {
-	display: flex;
-	justify-content: flex-start;
+.search-main {
 	position: relative;
-	margin-top: 20px;
+	top: 24px;
+	width: 800px;
 }
 
-nav.main-top .search input {
-	display: block;
+.search-main .search-input {
+	position: absolute;
+	top: 0;
+	left: 0;
 	width: 350px;
 	height: 40px;
-	border: none;
-	border-radius: 20px;
-	background-color: #f2f3fa;
-	padding: 0px 70px 0px 15px;
 }
 
-nav.main-top .search button {
+.search-main .search-input input.kw {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	border: none;
+	padding: 0 65px 0 25px;
+	border-radius: 25px;
+	background-color: #F2F3FA;
+}
+
+.search-main .search-input img {
+	position: absolute;
+	top: 12px;
+	right: 30px;
+	width: 15px;
+	height: 15px;
+}
+
+.search-main .search-btnlist {
+	position: absolute;
+	top: 0;
+	left: 364px;
+
+}
+
+.search-main button.search-btn {
 	width: 140px;
 	height: 40px;
-	text-align: center;
-	border: none;
-	background-color: transparent;
+	border: 0;
+	border-radius: 25px;
+	background-color: #F2F3FA;
+	color: #555;
+	font-size: 16px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	cursor: pointer;
-	color: white;
-	border-radius: 20px;
-	transition: 0.3s all;
-	background-color: #3b75fb;
-	margin-left: 20px;
-	font-size: 15px;
 }
 
-nav.main-top .search button i {
+.search-main button.search-btn img {
 	display: block;
-	font-weight: bold;
+	width: 20px;
+	height: 20px;
+	border-radius: 6px;
+	margin-right: 6px;
 }
 
-nav.main-top .search button:hover {
-	background-color: #3b75fb;
-	color: white;
+.search-main .search-btnlist .search-lists {
+	width: 393px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	position: absolute;
+	top: 60px;
+	right: 0;
+	background-color: #FFFFFF;
+	padding: 12px;
+	border-radius: 6px;
+	z-index: 100;
+	box-shadow: 0px 0px 6px #000000;
+}
+
+.search-main .search-btnlist .search-lists.hide {
+	display: none;
+}
+
+.search-main .search-btnlist .search-lists .list {
+	width: 33%;
+	line-height: 40px;
+	padding: 0 10px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	font-size: 15px;
+	border-radius: 6px;
+	cursor: pointer;
 	transition: 0.3s all;
 }
 
-nav.main-top .search input:focus {
-	box-shadow: 0px 0px 2px #3b75fb;
+.search-main .search-btnlist .search-lists .list img {
+	display: block;
+	width: 20px;
+	height: 20px;
+	margin-right: 8px;
+	border-radius: 6px;
+}
+
+.search-main .search-btnlist .search-lists .list:hover {
+	background-color: #64a15e;
+	color: #FFFFFF;
+	transition: 0.3s all;
 }
 
 nav .main-top-r {
@@ -396,9 +459,11 @@ footer {
 	line-height: 23px;
 	z-index: 100;
 }
-footer.show{
+
+footer.show {
 	position: static;
 }
+
 footer a:hover {
 	color: #3b75fb;
 }
@@ -406,13 +471,15 @@ footer a:hover {
 .header {
 	display: none;
 }
-.tool-bars{
+
+.tool-bars {
 	position: fixed;
 	bottom: 20px;
 	right: 20px;
 	z-index: 999;
 }
-.tool-bars p{
+
+.tool-bars p {
 	display: block;
 	width: 45px;
 	height: 45px;
@@ -424,17 +491,21 @@ footer a:hover {
 	margin-top: 10px;
 	cursor: pointer;
 }
-.tool-bars p i{
+
+.tool-bars p i {
 	display: block;
 	line-height: 45px;
 	font-size: 20px;
 }
-.tool-bars p:hover{
+
+.tool-bars p:hover {
 	box-shadow: 0px 0px 5px #CCCCCC;
 }
-.tool-bars p.scroll_top{
+
+.tool-bars p.scroll_top {
 	display: none;
 }
+
 /*为空*/
 
 #holmes-placeholder {
@@ -458,26 +529,32 @@ footer a:hover {
 	footer {
 		padding-left: 0;
 	}
+
 	header {
 		width: 65%;
 		left: -100%;
 		transition: 0.3s all;
 	}
+
 	header.show {
 		left: 0;
 		transition: 0.3s all;
 	}
+
 	header .logo a {
 		line-height: 60px;
 		font-size: 36px;
 		padding-left: 8%;
 	}
+
 	header .typelist p a {
 		padding-left: 8%;
 	}
+
 	header .typelist p.login {
 		display: block;
 	}
+
 	nav.main-top {
 		padding: 0 4% 0;
 		box-shadow: none;
@@ -485,9 +562,11 @@ footer a:hover {
 		flex-wrap: wrap;
 		position: static;
 	}
+
 	nav .main-top-r {
 		display: none;
 	}
+
 	nav.main-top .search {
 		display: flex;
 		padding: 15px 0;
@@ -495,32 +574,40 @@ footer a:hover {
 		justify-content: space-between;
 		width: 100%;
 	}
+
 	nav.main-top .search input {
 		width: 70%;
 		background-color: white;
 		border: 1px solid #3b75fb;
 	}
+
 	nav.main-top .search button {
 		width: 28%;
 		margin-left: 0;
 	}
+
 	.main {
 		padding-left: 0;
 		padding-top: 0px;
 	}
+
 	.site-main {
 		padding: 4%;
 	}
+
 	.site-main .site-list {
 		width: 100%;
 	}
+
 	.site-main .site-list .list {
 		width: 49%;
 		margin-bottom: 10px;
 	}
+
 	.site-main .site-list .list p.name {
 		font-size: 13px;
 	}
+
 	.header {
 		width: 100%;
 		display: flex;
@@ -528,6 +615,7 @@ footer a:hover {
 		background-color: white;
 		padding: 0 4%;
 	}
+
 	.header .logo a {
 		display: block;
 		width: 100%;
@@ -536,30 +624,36 @@ footer a:hover {
 		font-family: youshe;
 		font-size: 36px;
 	}
+
 	.header .nav-bar {
 		line-height: 60px;
 		padding: 0px 4%;
 	}
+
 	.header .nav-bar i {
 		display: block;
 		line-height: 60px;
 		font-size: 24px;
 	}
-	.tool-bars{
-	position: fixed;
-	bottom: 10px;
-	right: 10px;
-}
-	.tool-bars p{
+
+	.tool-bars {
+		position: fixed;
+		bottom: 10px;
+		right: 10px;
+	}
+
+	.tool-bars p {
 		width: 36px;
 		height: 36px;
 		line-height: 36px;
 	}
-	.tool-bars p i{
+
+	.tool-bars p i {
 		line-height: 36px;
 		font-size: 18px;
 	}
 }
+
 /*深色模式*/
 /* body.dark{
 	background-color: #1e1e1e;
