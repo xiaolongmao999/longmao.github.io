@@ -178,14 +178,22 @@ nav.main-top {
 	height: 100%;
 	border: none;
 	padding: 0 65px 0 25px;
-	border-radius: 25px;
+	border-radius: 20px;
 	background-color: #F2F3FA;
 }
 
-.search-main .search-input img {
+.search-input button {
 	position: absolute;
-	top: 12px;
-	right: 10%;
+	top: 0;
+	right: 0;
+	width: 20%;
+	height: 100%;
+	border: none;
+	border-radius: 20px;
+	background-color: #F2F3FA;
+}
+
+.search-input button img {
 	width: 15px;
 	height: 15px;
 }
@@ -201,7 +209,7 @@ nav.main-top {
 	width: 140px;
 	height: 40px;
 	border: 0;
-	border-radius: 25px;
+	border-radius: 20px;
 	background-color: #F2F3FA;
 	color: #555;
 	font-size: 16px;
@@ -594,12 +602,9 @@ footer a:hover {
 		background-color: #fff;
 	}
 
-	.search-main .search-input img {
-		position: absolute;
-		top: 12px;
-		right: 46%;
-		width: 15px;
-		height: 15px;
+	.search-main .search-input button {
+		background-color: #fff;
+		right: 40%;
 	}
 
 	.main {
