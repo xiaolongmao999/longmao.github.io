@@ -161,7 +161,7 @@ nav.main-top {
 .search-main {
 	position: relative;
 	top: 24px;
-	width: 800px;
+	width: 100%;
 }
 
 .search-main .search-input {
@@ -185,7 +185,7 @@ nav.main-top {
 .search-main .search-input img {
 	position: absolute;
 	top: 12px;
-	right: 30px;
+	right: 10%;
 	width: 15px;
 	height: 15px;
 }
@@ -193,7 +193,7 @@ nav.main-top {
 .search-main .search-btnlist {
 	position: absolute;
 	top: 0;
-	left: 364px;
+	left: 33%;
 
 }
 
@@ -567,32 +567,28 @@ footer a:hover {
 		display: none;
 	}
 
-		.search-main {
+	.search-main {
 		width: 70%;
 	}
 
 	.search-input input {
 		background-color: #fff;
-		width: 70%;
+		width: 30%;
 	}
 
-	.search-btnlist {
-		width: 70%;
+	.search-main .search-btnlist {
+		position: absolute;
+		top: 0;
+		left: 93%;
 	}
 
-	.search-main button.search-btn {
-		width: 70%;
+	.search-main .search-input img {
+		position: absolute;
+		top: 12px;
+		right: 30%;
+		width: 15px;
+		height: 15px;
 	}
-
-	.search-main button.search-btn img {
-		width: 70%;
-	}
-
-	.search-main .search-btnlist .search-lists .list img {
-		width: 70%;
-	}
-
-
 
 	.main {
 		padding-left: 0;
