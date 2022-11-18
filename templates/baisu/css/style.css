@@ -567,24 +567,10 @@ footer a:hover {
 		display: none;
 	}
 
-	nav.main-top .search {
-		display: flex;
-		padding: 15px 0;
-		margin-top: 0;
-		justify-content: space-between;
-		width: 100%;
-	}
-
-	nav.main-top .search input {
+	nav.main-top .search-main {
 		width: 70%;
-		background-color: white;
-		border: 1px solid #3b75fb;
 	}
 
-	nav.main-top .search button {
-		width: 28%;
-		margin-left: 0;
-	}
 
 	.main {
 		padding-left: 0;
